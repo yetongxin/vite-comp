@@ -18,16 +18,16 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
-    // 'import/extensions': [
-    //   'error',
-    //   'ignorePackages',
-    //   {
-    //     js: 'never',
-    //     jsx: 'never',
-    //     ts: 'never',
-    //     tsx: 'never',
-    //   },
-    // ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
   settings: {
@@ -36,5 +36,9 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
 };
